@@ -1,3 +1,5 @@
+package 前缀和技巧;
+
 public class NumMatrix304 {
     //preSum表示的是[0，0，i,j]区域的元素和
     int[][] preSum;

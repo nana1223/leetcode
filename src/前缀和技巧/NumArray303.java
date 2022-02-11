@@ -1,3 +1,5 @@
+package 前缀和技巧;
+
 import java.util.Scanner;
 
 public class NumArray303 {

@@ -1,3 +1,5 @@
+package 差分数组;
+
 public class Solution1109 {
 
     /**

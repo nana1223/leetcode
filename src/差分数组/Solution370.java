@@ -1,3 +1,5 @@
+package 差分数组;
+
 public class Solution370 {
 
     //public int[] getModifiedArray(int length, int[][] updates) {
