@@ -1,4 +1,4 @@
-package 前缀和技巧;
+package labuladong.数组.前缀和技巧;
 
 import java.util.Scanner;
 

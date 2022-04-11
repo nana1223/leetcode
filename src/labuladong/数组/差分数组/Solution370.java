@@ -1,4 +1,4 @@
-package 差分数组;
+package labuladong.数组.差分数组;
 
 public class Solution370 {
 

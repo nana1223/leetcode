@@ -1,10 +1,10 @@
-package 差分数组;
+package labuladong.数组.差分数组;
 
 public class Solution1094 {
 
     /**
      *
-     * 方法：差分数组   2ms 38.1mb
+     * 方法：labuladong.数组.差分数组   2ms 38.1mb
      */
     public boolean carPooling(int[][] trips, int capacity) {
 

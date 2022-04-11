@@ -1,4 +1,4 @@
-package 差分数组;
+package labuladong.数组.差分数组;
 
 public class Solution1109 {
 
@@ -17,7 +17,7 @@ public class Solution1109 {
 //    }
 
     /**
-     * 法二：差分数组  4ms 53.3mb
+     * 法二：labuladong.数组.差分数组  4ms 53.3mb
      */
     int[] diffArray;
 

@@ -1,4 +1,4 @@
-package 滑动窗口;
+package labuladong.数组.滑动窗口;
 
 import java.util.HashMap;
 import java.util.Map;
