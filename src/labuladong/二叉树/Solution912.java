@@ -1,12 +1,21 @@
-package 排序算法;
+package labuladong.二叉树;
 
-public class MergeSort {
+/**
+ * 912. 排序数组
+ * 用快排
+ */
+public class Solution912 {
+
+
+    public int[] sortArray(int[] nums) {
+        mergeSort(nums, 0, nums.length + 1);
+        return nums;
+    }
 
     /**
-     * 归并排序
-     * 类似于二叉树的后序遍历
-     *
-     * @param arr
+     * 归并排序————就是后序遍历
+     * 而归并排序属于二叉树中的分解思路，对子树再进行排序和合并
+     * 在每个节点的后序位置（左右子节点已经被排好序）的时候执行 merge 函数，合并两个子节点上的子数组
      */
     public static void mergeSort(int[] arr, int left, int right) {
         //先分治再归并。递归结束条件即分治到只有一个值的时候，开始归并
