@@ -117,6 +117,8 @@ public class Sort {
 
         while (i < j) {
             //先看右指针，与base比较，依次往左递减，当arr[j]<base时跳出循环
+
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  注意！！！ 快排必须右指针的操作写在前面 （若左指针在前面无法实现快排）
             while (i < j && arr[j] >= base) {
                 j--;
             }
@@ -383,16 +385,16 @@ public class Sort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {49, 38, 65, 97, 23, 22, 76, 1, 5, 8, 2, 12, 22};
+        int[] arr = {3, 2, 1, 5, 6, 4};
         //insertSort(arr);
         //shellSort(arr);
         //bubbleSort(arr);
-        //quickSort(arr, 0, arr.length - 1);
+        quickSort(arr, 0, arr.length - 1);
         //selectSort(arr);
         //heapSort(arr);
         //mergeSort(arr, 0, arr.length - 1);
         //bucketSort(arr);
-        radixSort(arr);
+        //radixSort(arr);
         System.out.println("排序后:");
         for (int i : arr) {
             System.out.print(i + " ");
