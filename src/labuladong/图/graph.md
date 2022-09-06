@@ -16,7 +16,7 @@ void traverse(TreeNode root) {
 图是可能包含环的，你从图的某一个节点开始遍历，有可能走了一圈又回到这个节点，而树不会出现这种情况，从某个节点出发必然走到叶子节点，绝不可能回到它自身。
 所以，如果图包含环，图的遍历框架就要一个 visited 数组进行辅助
 
-3. 图的遍历框架
+3. 图的DFS遍历框架
 ~~~java
 // 记录被遍历过的节点
 boolean[] visited;
@@ -25,7 +25,11 @@ boolean[] onPath;
 
 /* 图遍历框架 */
 void traverse(Graph graph, int s) {
-    if (visited[s]) return;
+    if (visited[s]) 
+        return;
+    
+    /* 前序遍历代码位置 */
+        
     // 经过节点 s，标记为已遍历
     visited[s] = true;
     // 做选择：标记节点 s 在路径上
@@ -35,5 +39,7 @@ void traverse(Graph graph, int s) {
     }
     // 撤销选择：节点 s 离开路径
     onPath[s] = false;
+
+    /* 后序遍历代码位置 */
 }
 ~~~

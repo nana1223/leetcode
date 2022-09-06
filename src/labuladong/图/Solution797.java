@@ -55,7 +55,7 @@ public class Solution797 {
         for (int node : graph[s]) {
             traverse(graph, node, path);
         }
-        //从路径中移除节点s
+        //从路径中移除节点s （没有相邻节点了 再往上走）
         path.remove(path.size() - 1);
     }
 }
