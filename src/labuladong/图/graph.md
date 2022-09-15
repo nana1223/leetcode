@@ -53,3 +53,4 @@ void traverse(Graph graph, int s) {
       2. 判定二分图的算法：说白了就是遍历一遍图，一边遍历一边染色，看看能不能用两种颜色给所有节点染色，且相邻节点的颜色都不相同。（DFS或BFS）
    2. 并查集Union-find算法
    3. 最小生成树算法：kruskal和Prim
+   4. 最短路径算法：1迪杰斯特拉算法Dijkstra
