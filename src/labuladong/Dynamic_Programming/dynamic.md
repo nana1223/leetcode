@@ -102,3 +102,7 @@ int knapsack(int W, int N, int[] wt, int[] val) {
 - 相比0-1背包最大的区别就是：每个物品的数量是无限的
 - 例题518. 零钱兑换 II
 - 完全背包最好懂的文章： https://leetcode.cn/problems/coin-change-ii/solution/by-flix-e1vv/
+
+# 三、动态规划总结
+1. 关键就在于列举出所有可能的「状态」，然后想想怎么穷举更新这些「状态」。一般用一个多维 dp 数组储存这些状态，从 base case 开始向后推进，推进到最后的状态，就是我们想要的答案。想想这个过程，你是不是有点理解「动态规划」这个名词的意义了呢？
+2.  dp 数组的遍历顺序是怎么确定的，主要是根据 base case，以 base case 为起点，逐步向结果靠近。

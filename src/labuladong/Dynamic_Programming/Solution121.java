@@ -65,15 +65,23 @@ public class Solution121 {
         int[][] dp = new int[n][2];
 
         for (int i = 0; i < n; i++) {
-            //1.base case
+            //1.base case （根据状态转移方程给出）
             if (i - 1 == -1) {
                 dp[i][0] = 0;
+                // 理解：负无穷怎么表示【从状态转移方程中来获取】
+                // 根据状态转移方程可得：
+                //   dp[i][1]
+                // = max(dp[-1][1], dp[-1][0] - prices[i])
+                // = max(-infinity, 0 - prices[i])
+                // = -prices[i]
                 dp[i][1] = -prices[i];
                 continue;
             }
             //2.状态转移
             dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
             //注意这里的细节：-prices[i]
+            //解释：这里简化k之前是 dp[i][1][1] = max(dp[i-1][1][1], dp[i-1][0][0] - prices[i]) 而k=0时dp[i-1][0][0]=0；
+            //后面122题k为正无穷没有这种情况，所以式子形式不一样
             dp[i][1] = Math.max(dp[i - 1][1], -prices[i]);
         }
         //所求
