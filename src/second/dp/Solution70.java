@@ -3,6 +3,9 @@ package second.dp;
 import java.util.Arrays;
 
 /**
+ *
+ * 70. 爬楼梯
+ *
  * 1.状态和选择：状态就是当前所在楼梯n， 选择就是站在当前楼梯上往上爬1或者2个，
  * 2.定义dp：dp(n)=x表示总共有n阶台阶，可以有x种不同方法爬到楼顶
  * 3.base case：n=0 n=1
