@@ -24,6 +24,9 @@ public class Solution05 {
         return s.replace(" ", "%20");
     }
 
+    /**
+     * 想法二：用可变的StringBuilder来处理
+     */
     public String replaceSpace(String s) {
 
         StringBuilder sb = new StringBuilder();

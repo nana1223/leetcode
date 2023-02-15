@@ -46,6 +46,7 @@ public class Solution35 {
             oldToNewMap.get(secOldPoint).next = oldToNewMap.get(secOldPoint.next);
             secOldPoint = secOldPoint.next;
         }
+        //返回的是新链表的头
         return oldToNewMap.get(head);
     }
 

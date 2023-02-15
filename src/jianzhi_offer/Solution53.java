@@ -54,4 +54,37 @@ public class Solution53 {
     }
 
 
+    public int search2(int[] nums, int target) {
+        //要统计次数，思路就是统计target的左右边界，用两次二分法，分别找到左右边界
+        int n = nums.length;
+        if (n == 0) {
+            return 0;
+        }
+        int rightIndex, leftIndex;
+        int start = 0;
+        int end = n - 1;
+        //1.第一次二分，找右边界。循环结束的时候 start就是右边界
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (target >= nums[mid]) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        rightIndex = start;
+        //2.第二次用二分，找左边界。循环结束的时候 end就是左边界
+        start = 0;
+        end = n - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (target <= nums[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        leftIndex = end;
+        return rightIndex - leftIndex - 1;
+    }
 }
