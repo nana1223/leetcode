@@ -52,7 +52,6 @@ public class Solution72 {
                 dp1(word1, i - 1, word2, j) + 1,
                 dp1(word1, i - 1, word2, j - 1) + 1
         );
-
     }
 
 
