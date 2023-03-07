@@ -17,8 +17,36 @@ package jianzhi_offer;
  * 4、注意：不可能left和right的返回值同时都是nullptr
  */
 public class Solution68_2 {
+    /**
+     * 思路：找两个节点的最近公共祖先，首先肯定是递归遍历
+     * 1.递归结束条件：找到pq，即 root ==p || root == q ； 走到叶子节点，返回null
+     * 2.递推工作怎么进行：若pq在当前节点root的左右两侧，那就返回root；若pq都在root的左孩子，就去左边找；若都在右边就都去右边找
+     * 3.递归参数，不断更新遍历的root节点
+     */
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+
+        //1.递归结束条件
+        if (root == p || root == q) {
+            return root;
+        }
+        if (root == null) {
+            return null;
+        }
+
+        //2.递推过程：左右遍历，然后判断pq分别对于root的位置
+        TreeNode leftNode = lowestCommonAncestor(root.left, p, q);
+        TreeNode rightNode = lowestCommonAncestor(root.right, p, q);
+
+        //若pq在当前节点root的左右两侧，那就返回root；若pq都在root的左孩子，就去左边找；若都在右边就都去右边找
+        if (leftNode != null && rightNode != null) {
+            return root;
+        }
+        return leftNode == null ? rightNode : leftNode;
+    }
+
+
+    public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
 
         //1.递归结束条件：遇到叶子节点返回，或者遇到p,q节点返回
         if (root == null) {
