@@ -1,7 +1,7 @@
 package jianzhi_offer;
 
 /**
- * 剑指 Offer 64. 求1+2+…+n
+     * 剑指 Offer 64. 求1+2+…+n
  * <p>
  * 递归求
  * <p>
