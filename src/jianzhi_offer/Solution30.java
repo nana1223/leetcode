@@ -18,7 +18,7 @@ import java.util.Deque;
  * 因为你想，栈顶出栈之后，最小数就得不到了。所以要动态的的存下每一个数据入栈之后的最小数。用栈来存。
  * 反思：用一个数据存不行的时候，就考虑用一个数据结构存下每一个最小）
  */
-public class MinStack {
+public class Solution30 {
 
 
     /**
@@ -31,7 +31,7 @@ public class MinStack {
     Deque<Integer> minStack;
 
 
-    public MinStack() {
+    public Solution30() {
         numStack = new ArrayDeque<>();
         minStack = new ArrayDeque<>();
         minStack.push(Integer.MAX_VALUE);
