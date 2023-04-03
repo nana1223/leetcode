@@ -33,7 +33,7 @@ public class Solution4 {
         return -1;
     }
 
-    public int singleNumber(int[] nums) {
+    public static int singleNumber(int[] nums) {
 
         //int型数字位数
         int[] counts = new int[32];
@@ -59,5 +59,10 @@ public class Solution4 {
             res = res | counts[31 - i];
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{2, 2, 3, 2};
+        singleNumber(nums);
     }
 }
